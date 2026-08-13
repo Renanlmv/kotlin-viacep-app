@@ -20,10 +20,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import br.com.renanlmv.viacepapp.core.UiState
 
 @Composable
-fun SearchCepScreen( searchViewModel: SearchViewModel ) {
+fun SearchCepScreen(
+    searchViewModel: SearchViewModel = viewModel()
+) {
     val cep = searchViewModel.cep
     val uiState = searchViewModel.uiState
 
